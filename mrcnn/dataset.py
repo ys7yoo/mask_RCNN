@@ -15,7 +15,7 @@ class Dataset(object):
         def image_reference(self, image_id):
             ...
 
-    See COCODataset and ShapesDataset as examples.
+    See CocoDataset (samples/coco/coco.py) and ShapesDataset (samples/shapes/shapes.py) as examples.
     """
 
     def __init__(self, class_map=None):

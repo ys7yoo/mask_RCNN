@@ -50,6 +50,7 @@ ROOT_DIR = os.path.abspath("../../")
 sys.path.append(ROOT_DIR)  # To find local version of the library
 from mrcnn.config import Config
 from mrcnn import utils
+from mrcnn import dataset
 from mrcnn import model as modellib
 from mrcnn import visualize
 
@@ -180,7 +181,7 @@ class NucleusInferenceConfig(NucleusConfig):
 #  Dataset
 ############################################################
 
-class NucleusDataset(utils.Dataset):
+class NucleusDataset(dataset.Dataset):
 
     def load_nucleus(self, dataset_dir, subset):
         """Load a subset of the nuclei dataset.

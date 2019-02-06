@@ -23,6 +23,8 @@ ROOT_DIR = os.path.abspath("../../")
 sys.path.append(ROOT_DIR)  # To find local version of the library
 from mrcnn.config import Config
 from mrcnn import utils
+from mrcnn import dataset
+
 
 
 class ShapesConfig(Config):
@@ -60,7 +62,7 @@ class ShapesConfig(Config):
     VALIDATION_STEPS = 5
 
 
-class ShapesDataset(utils.Dataset):
+class ShapesDataset(dataset.Dataset):
     """Generates the shapes synthetic dataset. The dataset consists of simple
     shapes (triangles, squares, circles) placed randomly on a blank surface.
     The images are generated on the fly. No file access required.
